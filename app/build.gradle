@@ -21,7 +21,8 @@ android {
         release {
             firebaseAppDistribution {
                 releaseNotes="Release notes for demo version"
-                serviceCredentialsFile="$rootDir/myfirstappfb-d1767-23e730c67a46.json"
+                serviceCredentialsFile=System.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+                //"$rootDir/myfirstappfb-d1767-23e730c67a46.json"
                 groups="group1"
             }
             minifyEnabled false
